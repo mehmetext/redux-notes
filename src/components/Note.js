@@ -1,3 +1,5 @@
+import getDate from "../utils/getDate";
+
 export default function Note({ note }) {
 	if (note.text.length > 240) {
 		note.text = note.text.slice(0, 240) + "...";
@@ -7,7 +9,7 @@ export default function Note({ note }) {
 		<div style={{ backgroundColor: note.color }} className="note">
 			<div className="note-text">{note.text}</div>
 			<div className="note-detail">
-				<div className="note-date">22/08/2022 - 10:12</div>
+				<div className="note-date">{getDate(note.date)}</div>
 			</div>
 		</div>
 	);
