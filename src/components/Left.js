@@ -31,6 +31,9 @@ export default function Left() {
 					<NoteColor color="#565656" />
 					<NoteColor color="#c74343" />
 					<NoteColor color="#4ac34a" />
+					<NoteColor color="#4a88c3" />
+					<NoteColor color="#6d4ac3" />
+					<NoteColor color="#c34a9a" />
 				</div>
 				<button className="add-note-button">ADD</button>
 			</form>
