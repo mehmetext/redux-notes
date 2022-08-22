@@ -3,14 +3,7 @@ import { nanoid } from "nanoid";
 import { useSelector } from "react-redux";
 
 const initialState = {
-	notes: [
-		{
-			id: "12312321",
-			text: "deneme notum",
-			date: "2022-08-22T07:31:38.134Z",
-			color: "#565656",
-		},
-	],
+	notes: JSON.parse(localStorage.getItem("notes") ?? "[]"),
 	selectedColor: localStorage.getItem("selectedColor") ?? "#565656",
 };
 
@@ -31,6 +24,8 @@ const slice = createSlice({
 			};
 
 			state.notes = [note, ...state.notes];
+
+			localStorage.setItem("notes", JSON.stringify(state.notes));
 		},
 	},
 });
