@@ -123,9 +123,7 @@ body,
 }
 
 .note {
-	flex: 1;
-	flex-basis: calc(33.33333% - 10px);
-	max-width: 240px;
+	flex-basis: 240px;
 	height: 300px;
 	box-sizing: border-box;
 	padding: 10px;
@@ -133,4 +131,20 @@ body,
 	background: #333;
 	border-radius: 6px;
 	box-shadow: 0 2px 3px rgb(0 0 0 / 10%);
+	display: flex;
+	flex-direction: column;
+}
+
+.note-text {
+	flex: 1;
+}
+
+.note-detail {
+	border-top: 1px solid rgb(255 255 255 / 20%);
+	color: rgb(255 255 255 / 60%);
+	font-size: 10px;
+	padding-top: 5px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
