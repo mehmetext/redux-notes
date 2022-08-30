@@ -1,6 +1,6 @@
 import store from ".";
 
-import { changeColor, addNote } from "./notes";
+import { changeColor, addNote, changeResShow } from "./notes";
 
 export const changeColorDispatch = (color) => {
 	store.dispatch(changeColor(color));
@@ -8,4 +8,8 @@ export const changeColorDispatch = (color) => {
 
 export const addNoteDispatch = (note) => {
 	store.dispatch(addNote(note));
+};
+
+export const changeResShowDispatch = () => {
+	store.dispatch(changeResShow());
 };

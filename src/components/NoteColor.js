@@ -8,7 +8,7 @@ export default function NoteColor({ color }) {
 	return (
 		<div
 			onClick={handleClick}
-			className="note-color"
+			className="h-6 w-6 rounded-full m-1 border-2 border-transparent cursor-pointer"
 			style={{ background: color }}
 		></div>
 	);

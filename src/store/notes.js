@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 const initialState = {
 	notes: JSON.parse(localStorage.getItem("notes") ?? "[]"),
 	selectedColor: localStorage.getItem("selectedColor") ?? "#565656",
+	responsiveShow: false,
 };
 
 const slice = createSlice({
@@ -14,6 +15,9 @@ const slice = createSlice({
 		changeColor: (state, action) => {
 			state.selectedColor = action.payload;
 			localStorage.setItem("selectedColor", action.payload);
+		},
+		changeResShow: (state, action) => {
+			state.responsiveShow = !state.responsiveShow;
 		},
 		addNote: (state, action) => {
 			const note = {
@@ -32,6 +36,6 @@ const slice = createSlice({
 
 export const useNotes = () => useSelector((state) => state.notes);
 
-export const { changeColor, addNote } = slice.actions;
+export const { changeColor, addNote, changeResShow } = slice.actions;
 
 export default slice.reducer;
